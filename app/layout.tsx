@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Geist_Mono, M_PLUS_Rounded_1c } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import Header from "@/components/layout/header/header";
+import Footer from "@/components/layout/footer/footer";
 
 const mPlusRounded1c = M_PLUS_Rounded_1c({
 	variable: "--font-m-plus-rounded-1c",
