@@ -1,0 +1,15 @@
+# TypeScript/TSX コーディングスタイル
+
+- TypeScriptのstrict modeを厳守すること
+- any型の使用は禁止
+- 適切な型定義を必ず行う
+- 関数型プログラミングを推奨
+- React 19の新機能を活用
+- サーバーコンポーネントを優先的に使用
+- Biomeによるフォーマット・リントを徹底
+- インデントはタブ、クォートはダブルクォート
+- コメントは日本語で記述
+description:
+globs:
+alwaysApply: false
+---

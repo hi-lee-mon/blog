@@ -1,0 +1,12 @@
+# Tailwind CSS スタイリングルール
+
+- Tailwind CSS v4のユーティリティクラスを優先的に使用する
+- カスタムCSSは最小限に抑える
+- レスポンシブデザインを必ず考慮する
+- ダークモード対応を推奨
+- アクセシビリティを意識したクラス設計
+- shadcn/uiやRadix UIのパターンを活用
+description:
+globs:
+alwaysApply: false
+---

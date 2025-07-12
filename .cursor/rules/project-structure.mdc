@@ -1,0 +1,17 @@
+# プロジェクト構造ガイド
+
+このプロジェクトはNext.js 15（App Router）とTypeScript（strict mode）を使用したブログアプリです。
+
+- メインエントリ: [app/layout.tsx](mdc:app/layout.tsx)
+- ページ: [app/(default)/](mdc:app/(default)/)
+- グローバルCSS: [app/globals.css](mdc:app/globals.css)
+- 共通コンポーネント: [components/](mdc:components/)
+- UIコンポーネント: [components/ui/](mdc:components/ui/)
+- ユーティリティ: [lib/utils.ts](mdc:lib/utils.ts)
+- 設定ファイル: [package.json](mdc:package.json), [tsconfig.json](mdc:tsconfig.json), [biome.json](mdc:biome.json)
+
+ディレクトリやファイルの役割を守り、適切な場所にコードを配置してください。
+description:
+globs:
+alwaysApply: false
+---

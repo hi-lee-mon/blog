@@ -1,0 +1,18 @@
+# コミットメッセージ規約（Gitmoji＋prefix）
+
+コミットメッセージは以下のprefixとGitmojiを必ず使用してください。
+
+- ✨ feat: 新機能
+- 🐛 fix: バグ修正
+- 📝 docs: ドキュメント
+- 💄 style: スタイル変更
+- ♻️ refactor: リファクタリング
+- ⚡ perf: パフォーマンス改善
+- ✅ test: テスト追加
+- 🔧 chore: 設定変更
+
+例: `✨ feat: ユーザー認証機能を実装`
+description:
+globs:
+alwaysApply: false
+---
