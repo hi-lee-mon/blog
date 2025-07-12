@@ -117,6 +117,8 @@
     @apply border-border outline-ring/50;
   }
   body {
+    /* RootRayoutのvariableを指定 */
+    font-family: var(--font-m-plus-rounded-1c);
     @apply bg-background text-foreground;
   }
 }
