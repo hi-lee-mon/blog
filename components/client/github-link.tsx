@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
 export default function GithubLink() {
-	const url = "https://github.com/hi-lee-mon/blog/tree/main";
+	const url = "https://github.com/hi-lee-mon/blog/tree/main/app/(default)";
 	const pathname = usePathname();
 	return (
 		<Button asChild size="icon" variant="outline">
