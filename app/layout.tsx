@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Geist_Mono, M_PLUS_Rounded_1c } from "next/font/google";
+import { Geist_Mono, M_PLUS_Rounded_1c } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/header/header";
-import Footer from "@/components/layout/footer/footer";
 
 const mPlusRounded1c = M_PLUS_Rounded_1c({
 	variable: "--font-m-plus-rounded-1c",
@@ -29,11 +27,9 @@ export default function RootLayout({
 	return (
 		<html lang="ja" suppressHydrationWarning>
 			<body
-				className={`${mPlusRounded1c.variable} ${geistMono.variable} antialiased`}
+				className={`${mPlusRounded1c.variable} ${geistMono.variable} antialiased min-h-dvh text-balance`}
 			>
-				<Header />
 				{children}
-				<Footer />
 			</body>
 		</html>
 	);

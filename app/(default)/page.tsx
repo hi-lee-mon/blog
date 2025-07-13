@@ -17,11 +17,9 @@ export default function Home() {
 	];
 
 	return (
-		<main className="max-w-2xl mx-auto py-8 px-4">
-			<h1 className="text-3xl font-bold mb-6">My Blogへようこそ</h1>
-			<p className="mb-8 text-lg">
-				Next.jsとshadcn/uiで作成したサンプルブログです。
-			</p>
+		<div className="max-w-2xl mx-auto py-8 px-4">
+			<h1 className="text-3xl font-bold mb-6">Shun's Blogへようこそ</h1>
+			<p className="mb-8 text-lg">Next.jsとshadcn/uiで作成したブログです。</p>
 			<h2 className="text-2xl font-semibold mb-4">最新記事</h2>
 			<div className="space-y-4">
 				{posts.map((post) => (
@@ -36,6 +34,6 @@ export default function Home() {
 					</Card>
 				))}
 			</div>
-		</main>
+		</div>
 	);
 }
