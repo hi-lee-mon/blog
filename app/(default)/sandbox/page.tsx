@@ -10,6 +10,11 @@ export default function Page() {
       <Button asChild>
         <Link href="sandbox/mui/resizable-item">リサイズ可能なアイテム</Link>
       </Button>
+      <Button asChild>
+        <Link href="sandbox/mui/draggable-resizable-dialog">
+          ドラッグ＆リサイズ可能なダイアログ
+        </Link>
+      </Button>
     </div>
   );
 }
