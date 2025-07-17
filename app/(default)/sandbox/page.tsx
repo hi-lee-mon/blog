@@ -15,6 +15,9 @@ export default function Page() {
           ドラッグ＆リサイズ可能なダイアログ
         </Link>
       </Button>
+      <Button asChild>
+        <Link href="sandbox/mui/grid">Grid</Link>
+      </Button>
     </div>
   );
 }
