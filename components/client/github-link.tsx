@@ -8,7 +8,7 @@ export default function GithubLink() {
   const url = "https://github.com/hi-lee-mon/blog/tree/main/app/(default)";
   const pathname = usePathname();
   return (
-    <Button asChild size="icon" variant="outline">
+    <Button asChild size="icon" variant="outline" className="size-10">
       <a href={`${url}${pathname}`} target="_blank" rel="noopener">
         <Github />
       </a>
