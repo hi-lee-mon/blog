@@ -1,9 +1,9 @@
-import Link from "next/link";
+import LinkList from "./_component/link-list";
 
 export default async function Page() {
   return (
     <div className="space-y-4">
-      <Link href="sandbox/mui">MUI</Link>
+      <LinkList importMetaUrl={import.meta.url} />
     </div>
   );
 }
