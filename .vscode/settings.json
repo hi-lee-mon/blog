@@ -3,5 +3,6 @@
     // 保存時にインポートをソートする
     "source.organizeImports.biome": "explicit",
     "source.fixAll.biome": "explicit"
-  }
+  },
+  "cSpell.words": ["treeify"]
 }

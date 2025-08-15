@@ -9,6 +9,7 @@ export default function ContactForm() {
   const [clientErrors, setClientErrors] = useState({
     name: "",
     message: "",
+    email: "",
   });
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -18,6 +19,8 @@ export default function ContactForm() {
         ContactSchema.pick({ name: true }).parse({ name: value });
       } else if (name === "message") {
         ContactSchema.pick({ message: true }).parse({ message: value });
+      } else if (name === "email") {
+        ContactSchema.pick({ email: true }).parse({ email: value });
       }
       // errorがthrowされなかった場合はblurされたフィールド名のエラーメッセージをクリア
       setClientErrors((prev) => ({
@@ -29,6 +32,7 @@ export default function ContactForm() {
         const fieldErrors = z.flattenError(error).fieldErrors as {
           name?: string[];
           message?: string[];
+          email?: string[];
         };
 
         console.log(fieldErrors);
@@ -69,6 +73,20 @@ export default function ContactForm() {
         )}
         {state.errors.message && (
           <p className="text-red-500">{state.errors.message.join(", ")}</p>
+        )}
+        <label htmlFor="email">E-Mail</label>
+        <input
+          className="border"
+          type="email"
+          id="email"
+          name="email"
+          onBlur={handleBlur}
+        />
+        {clientErrors.email && (
+          <p className="text-red-500">{clientErrors.message}</p>
+        )}
+        {state.errors.email && (
+          <p className="text-red-500">{state.errors.email.join(", ")}</p>
         )}
         <button className="border bg-blue-500" type="submit">
           Submit
