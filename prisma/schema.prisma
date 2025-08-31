@@ -17,14 +17,38 @@ model Contact {
   updatedAt DateTime @updatedAt
 }
 
-
-// @id・・PK @default・・デフォルト値 @unique・・重複不可
-// ?・・必須ではない Post[]・・1対nを表す @updatedAt・・更新年月
-model User {
-  id String @id @default(cuid())
-  email String @unique
-  password String
-  name String
+model Tag {
+  id    String @id @default(cuid())
+  name  String @unique
+  slug  String @unique
+  description String?
+  color String? // タグの表示色
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  // リレーション
+  posts PostTag[]
+}
+
+model Post {
+  id String @id @default(cuid())
+  title String
+  content String
+  topImage String?
+  published Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  // リレーション
+  tags PostTag[]
+}
+
+// 中間テーブル（多対多リレーション）
+model PostTag {
+  id String @id @default(cuid())
+  postId String
+  tagId  String
+  // POSTテーブルのidと本テーブルのpostIdを紐づける。投稿が削除されると、関連するPostTagレコードも自動削除
+  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+  // Tagテーブルのidと本テーブルのtagIdを紐づける。タグが削除されると、関連するPostTagレコードも自動削除
+  tag  Tag  @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  @@unique([postId, tagId]) // 同じ投稿に同じタグを複数回登録できないようにする
 }
