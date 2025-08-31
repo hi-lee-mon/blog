@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning>
       <body
-        className={`${mPlusRounded1c.variable} ${geistMono.variable} antialiased min-h-dvh text-balance`}
+        className={`${mPlusRounded1c.variable} ${geistMono.variable} min-h-dvh text-balance antialiased`}
       >
         {children}
       </body>

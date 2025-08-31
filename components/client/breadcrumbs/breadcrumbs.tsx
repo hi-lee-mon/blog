@@ -8,7 +8,7 @@ export default function Breadcrumbs() {
   const pathname = usePathname();
   const paths = pathname.split("/").slice(1);
   return (
-    <div className="flex gap-1 items-center">
+    <div className="flex items-center gap-1">
       <Link href="/" className="text-blue-500 hover:underline">
         <Home />
       </Link>

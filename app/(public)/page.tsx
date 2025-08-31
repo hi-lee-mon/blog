@@ -17,20 +17,20 @@ export default function Home() {
   ];
 
   return (
-    <div className="max-w-2xl mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6">Shun's Blogへようこそ</h1>
+    <div className="mx-auto max-w-2xl px-4 py-8">
+      <h1 className="mb-6 font-bold text-3xl">Shun's Blogへようこそ</h1>
       <p className="mb-8 text-lg">Next.jsとshadcn/uiで作成したブログです。</p>
-      <h2 className="text-2xl font-semibold mb-4">最新記事</h2>
+      <h2 className="mb-4 font-semibold text-2xl">最新記事</h2>
       <div className="space-y-4">
         {posts.map((post) => (
           <Card key={post.slug} className="p-4">
             <Link
               href={`/blog/${post.slug}`}
-              className="text-xl font-semibold hover:underline"
+              className="font-semibold text-xl hover:underline"
             >
               {post.title}
             </Link>
-            <p className="text-gray-500 mt-2">{post.summary}</p>
+            <p className="mt-2 text-gray-500">{post.summary}</p>
           </Card>
         ))}
       </div>
