@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, M_PLUS_Rounded_1c } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
 const mPlusRounded1c = M_PLUS_Rounded_1c({
   variable: "--font-m-plus-rounded-1c",
@@ -29,7 +30,14 @@ export default function RootLayout({
       <body
         className={`${mPlusRounded1c.variable} ${geistMono.variable} min-h-dvh text-balance antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
