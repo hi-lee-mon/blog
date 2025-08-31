@@ -28,6 +28,9 @@
       "correctness": {
         "noUnusedImports": "warn"
       },
+      "suspicious": {
+        "noShadowRestrictedNames": "off" // error.tsxでErrorという名前のコンポーネントを定義するとエラーが発生するため無視
+      },
       "nursery": {
         "useSortedClasses": {
           // TailwindCSSのクラスをソートするルール
