@@ -1,7 +1,7 @@
 export default function AboutPage() {
   return (
-    <main className="max-w-2xl mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6">このサイトについて</h1>
+    <main className="mx-auto max-w-2xl px-4 py-8">
+      <h1 className="mb-6 font-bold text-3xl">このサイトについて</h1>
       <p className="text-lg">
         Next.jsとshadcn/uiで作成したブログサイトのサンプルです。
       </p>

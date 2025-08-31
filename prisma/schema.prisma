@@ -16,3 +16,15 @@ model Contact {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+
+// @id・・PK @default・・デフォルト値 @unique・・重複不可
+// ?・・必須ではない Post[]・・1対nを表す @updatedAt・・更新年月
+model User {
+  id String @id @default(cuid())
+  email String @unique
+  password String
+  name String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

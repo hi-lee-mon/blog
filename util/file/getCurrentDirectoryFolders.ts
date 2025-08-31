@@ -1,8 +1,9 @@
-import fs from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 export async function getCurrentDirectoryFolders(importMetaUrl: string) {
+  "use cache";
   const __filename = fileURLToPath(importMetaUrl);
   const __dirname = path.dirname(__filename);
 
