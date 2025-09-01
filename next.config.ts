@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  typedRoutes: true,
   experimental: {
     // pnpm run buildで有効化される実験的機能がわかる。今はいかが有効化されている
     // - Experiments (use with caution):
