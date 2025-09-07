@@ -44,3 +44,7 @@ next-env.d.ts
 storybook-static
 
 /lib/generated/prisma
+
+# claude code
+settings.local.json
+settings.local.jsonc
